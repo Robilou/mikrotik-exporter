@@ -53,3 +53,11 @@ format:
 .PHONY: test
 test:
 	go test ./...
+
+.PHONY: build_image
+build_image:
+	docker build -t mikrotik-exporter .
+
+.PHONY: build_docker_all
+build_docker_all:
+	docker buildx build --platform linux/amd64,linux/arm64 -t mikrotik-exporter .

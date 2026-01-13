@@ -41,3 +41,4 @@ dist/
 !.gitignore
 !.golangci.yml
 !.air.toml
+!.github/
